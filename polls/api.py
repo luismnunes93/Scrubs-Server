@@ -16,7 +16,7 @@ class QuestionList(generics.ListCreateAPIView):
 
 class ChoiceList(generics.ListCreateAPIView):
     model = Choice
-    queryset = Choice.objects.filter(question__question_text__contains='up?')
+    queryset = Choice.objects.filter(question__name__contains='up?')
     serializer_class = ChoiceSerializer
     permission_classes = [
         permissions.AllowAny

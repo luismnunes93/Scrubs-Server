@@ -6,7 +6,7 @@ from .models import Question, Choice
 class QuestionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Question
-        fields = ('question_text', 'pub_date', 'thumbnail')
+        fields = ('name', 'pub_date', 'thumbnail')
 
 
 class ChoiceSerializer(serializers.ModelSerializer):
